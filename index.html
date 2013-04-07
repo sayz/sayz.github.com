@@ -9,9 +9,7 @@
   <meta name="author" content="Sefa Yıldız">
 
   
-  <meta name="description" content="Merhaba Octopress Gist denemesi, FizzBuzz kodu: Kod blokları denemesi Javascript Array Syntax MDN Documentation 1
-2
-var arr1 = new Array(arrayLength &hellip;">
+  <meta name="description" content="herkese merhabalar; autopep8 için bölüm&#8217;ün e-posta listesine attığım e-postayı buraya da geçeyim.$ bildiğiniz gibi python için bir kod yazım &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +77,130 @@ var arr1 = new Array(arrayLength &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/">Otomatik Pep8&#8217;leyici: Autopep8</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-07T21:45:00+03:00" pubdate data-updated="true">Apr 7<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>herkese merhabalar;</p>
+
+<p>autopep8 için bölüm&#8217;ün e-posta listesine attığım e-postayı buraya da geçeyim.$</p>
+
+<p>bildiğiniz gibi python için bir kod yazım stili var: pep8 (bilmeyenler için<sup>(<a href="http://www.python.org/dev/peps/pep-0008/">1</a>)</sup>), neyse, işte python ile yeni kod yazmaya başlayan arkadaşlar genellikle bu kurallara, stile uymakta zorlanır veya erinirler bunları uygulamaya, ne bileyim işleçler arasında boşluk bırakmak falan zor gelir kimisine.</p>
+
+<p>biliyorsunuz genelde tembel insanlarız bizler :-) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :-) ve kalkıp bir otomatik &#8220;pep8&#8221;leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
+
+<h5>peki nedir bu autopep8, yenilir mi içilir mi?</h5>
+
+<p>kısaca şudur:</p>
+
+<p>sen karman çorman yazıyorsun kodu<sup>(<a href="http://goo.gl/BYUeu">2</a>)</sup> ve autopep8 sadece tek satırlık komutla kodunu pep8&#8217;e uygun hale<sup>(<a href="http://goo.gl/C5LqP">3</a>)</sup> getiriyor.</p>
+
+<ul>
+<li>önce autopep8&#8217;i kuralım sistemimize:</li>
+</ul>
+
+
+<p> ~$: <code>sudo easy_install -ZU autopep8</code></p>
+
+<ul>
+<li>kurulumdan sonra şöyle kullanabilirsiniz autopep8&#8217;i:</li>
+</ul>
+
+
+<p>  ~$: <code>autopep8 -ia bozuk_kod.py</code></p>
+
+<p>  artık kodunuz pep8 standartlarına uygun hale gelmiş oldu.</p>
+
+<p>  iki dosya arasındaki farkı görmek için <a href="https://gist.github.com/sayz/5331516/revisions">şuradaki</a> gist karşılaştırmasına bakabilirsiniz.</p>
+
+<p>  autopep8&#8217;e sokmadan önce bozuk_kod.py doyasının pep8 çıktısı 144 satırdı.<sup>(<a href="http://goo.gl/1Gcmh">4</a>)</sup></p>
+
+<p>  daha fazlası <a href="https://github.com/hhatto/autopep8">burada</a>.</p>
+
+<p>  \HTH</p>
+
+<p>  &#8211;
+  sayz</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/03/cinnamon-settingsde-python-hatasi/">Cinnamon Settings&#8217;de Python Hatası</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-03T16:16:00+03:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/03/cinnamon-settingsde-python-hatasi/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>masaüstü sistem olarak linux mint cinnamon 14 kullanıyorum geçenlerde cinnamon&#8217;un ayarlarını açmaya çalıştığımda açılmadı konsola yazdığımda şöyle bir hata alıyorum:</p>
+
+<pre><code>sayz@caravasar$  cinnamon-settings 
+/usr/lib/python2.7/dist-packages/gobject/constants.py:24: Warning: g_boxed_type_register_static    : assertion `g_type_from_name (name) == 0' failed
+import gobject._gobject
+
+&gt;&gt;&gt;
+</code></pre>
+
+<p>hata cinnamon&#8217;dan değil python&#8217;dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>&#8216;de de hata kaydı açılmış bunula ilgili.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -202,6 +324,14 @@ var arr1 = new Array(arrayLength &hellip;">
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/">otomatik pep8&#8217;leyici: autopep8</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/03/cinnamon-settingsde-python-hatasi/">cinnamon settings&#8217;de python hatası</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/29/merhaba-octopress/">merhaba octopress</a>

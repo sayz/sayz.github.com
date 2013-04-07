@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Sayz'ın Usu</title>
+  <title>otomatik pep8'leyici: autopep8 - Sayz'ın Usu</title>
   <meta name="author" content="Sefa Yıldız">
 
   
-  <meta name="description" content="Blog Archive 2013 otomatik pep8&#8217;leyici: autopep8
-Apr 07 2013 posted in python cinnamon settings&#8217;de python hatası
-Apr 03 2013 posted in &hellip;">
+  <meta name="description" content="herkese merhabalar; autopep8 için bölüm&#8217;ün e-posta listesine attığım e-postayı buraya da geçeyim.$ bildiğiniz gibi python için bir kod yazım &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Apr 03 2013 posted in &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sayz.github.com/blog/archives">
+  <link rel="canonical" href="http://sayz.github.com/blog/2013/04/07/otomatik-pep8-leyici-autopep8">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sayz'ın Usu" type="application/atom+xml">
@@ -78,64 +76,132 @@ Apr 03 2013 posted in &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Otomatik Pep8'leyici: Autopep8</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-07T21:45:00+03:00" pubdate data-updated="true">Apr 7<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>herkese merhabalar;</p>
 
-  
-  <h2>2013</h2>
+<p>autopep8 için bölüm&#8217;ün e-posta listesine attığım e-postayı buraya da geçeyim.$</p>
 
-<article>
-  
-<h1><a href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/">otomatik pep8&#8217;leyici: autopep8</a></h1>
-<time datetime="2013-04-07T21:45:00+03:00" pubdate><span class='month'>Apr</span> <span class='day'>07</span> <span class='year'>2013</span></time>
+<p>bildiğiniz gibi python için bir kod yazım stili var: pep8 (bilmeyenler için<sup>(<a href="http://www.python.org/dev/peps/pep-0008/">1</a>)</sup>), neyse, işte python ile yeni kod yazmaya başlayan arkadaşlar genellikle bu kurallara, stile uymakta zorlanır veya erinirler bunları uygulamaya, ne bileyim işleçler arasında boşluk bırakmak falan zor gelir kimisine.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/python/'>python</a></span>
-</footer>
+<p>biliyorsunuz genelde tembel insanlarız bizler :-) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :-) ve kalkıp bir otomatik &#8220;pep8&#8221;leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
 
+<h5>peki nedir bu autopep8, yenilir mi içilir mi?</h5>
 
-</article>
+<p>kısaca şudur:</p>
 
+<p>sen karman çorman yazıyorsun kodu<sup>(<a href="http://goo.gl/BYUeu">2</a>)</sup> ve autopep8 sadece tek satırlık komutla kodunu pep8&#8217;e uygun hale<sup>(<a href="http://goo.gl/C5LqP">3</a>)</sup> getiriyor.</p>
 
-
-<article>
-  
-<h1><a href="/blog/2013/04/03/cinnamon-settingsde-python-hatasi/">cinnamon settings&#8217;de python hatası</a></h1>
-<time datetime="2013-04-03T16:16:00+03:00" pubdate><span class='month'>Apr</span> <span class='day'>03</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/hatalar/'>hatalar</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/python/'>python</a></span>
-</footer>
+<ul>
+<li>önce autopep8&#8217;i kuralım sistemimize:</li>
+</ul>
 
 
-</article>
+<p> ~$: <code>sudo easy_install -ZU autopep8</code></p>
+
+<ul>
+<li>kurulumdan sonra şöyle kullanabilirsiniz autopep8&#8217;i:</li>
+</ul>
 
 
+<p>  ~$: <code>autopep8 -ia bozuk_kod.py</code></p>
 
-<article>
-  
-<h1><a href="/blog/2013/03/29/merhaba-octopress/">merhaba octopress</a></h1>
-<time datetime="2013-03-29T03:01:00+02:00" pubdate><span class='month'>Mar</span> <span class='day'>29</span> <span class='year'>2013</span></time>
+<p>  artık kodunuz pep8 standartlarına uygun hale gelmiş oldu.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/genel/'>genel</a>, <a class='category' href='/blog/categories/kod/'>kod</a></span>
-</footer>
+<p>  iki dosya arasındaki farkı görmek için <a href="https://gist.github.com/sayz/5331516/revisions">şuradaki</a> gist karşılaştırmasına bakabilirsiniz.</p>
 
+<p>  autopep8&#8217;e sokmadan önce bozuk_kod.py doyasının pep8 çıktısı 144 satırdı.<sup>(<a href="http://goo.gl/1Gcmh">4</a>)</sup></p>
 
-</article>
+<p>  daha fazlası <a href="https://github.com/hhatto/autopep8">burada</a>.</p>
 
+<p>  \HTH</p>
+
+<p>  &#8211;
+  sayz</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Sefa Yıldız</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-07T21:45:00+03:00" pubdate data-updated="true">Apr 7<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/python/'>python</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sayz.github.com/blog/2013/04/07/otomatik-pep8-leyici-autopep8/" data-via="sayzus" data-counturl="http://sayz.github.com/blog/2013/04/07/otomatik-pep8-leyici-autopep8/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/03/cinnamon-settingsde-python-hatasi/" title="Previous Post: cinnamon settings'de python hatası">&laquo; cinnamon settings'de python hatası</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -211,7 +277,10 @@ Apr 03 2013 posted in &hellip;">
       var disqus_shortname = 'otopress-sayz';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sayz.github.com/blog/2013/04/07/otomatik-pep8-leyici-autopep8/';
+        var disqus_url = 'http://sayz.github.com/blog/2013/04/07/otomatik-pep8-leyici-autopep8/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
