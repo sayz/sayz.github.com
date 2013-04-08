@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://sayz.github.com/sitemap.xml 
+Sitemap: http://sayz.github.io/sitemap.xml 

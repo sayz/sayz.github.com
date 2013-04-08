@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: kod | Sayz'ın Usu]]></title>
-  <link href="http://sayz.github.com/blog/categories/kod/atom.xml" rel="self"/>
-  <link href="http://sayz.github.com/"/>
-  <updated>2013-04-07T22:29:26+03:00</updated>
-  <id>http://sayz.github.com/</id>
+  <link href="http://sayz.github.io/blog/categories/kod/atom.xml" rel="self"/>
+  <link href="http://sayz.github.io/"/>
+  <updated>2013-04-08T18:22:18+03:00</updated>
+  <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[merhaba octopress]]></title>
-    <link href="http://sayz.github.com/blog/2013/03/29/merhaba-octopress/"/>
+    <link href="http://sayz.github.io/blog/2013/03/29/merhaba-octopress/"/>
     <updated>2013-03-29T03:01:00+02:00</updated>
-    <id>http://sayz.github.com/blog/2013/03/29/merhaba-octopress</id>
+    <id>http://sayz.github.io/blog/2013/03/29/merhaba-octopress</id>
     <content type="html"><![CDATA[<p>Merhaba Octopress</p>
 
 <p>Gist denemesi, FizzBuzz kodu:</p>

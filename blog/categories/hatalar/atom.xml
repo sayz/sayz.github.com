@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hatalar | Sayz'ın Usu]]></title>
-  <link href="http://sayz.github.com/blog/categories/hatalar/atom.xml" rel="self"/>
-  <link href="http://sayz.github.com/"/>
-  <updated>2013-04-07T22:29:26+03:00</updated>
-  <id>http://sayz.github.com/</id>
+  <link href="http://sayz.github.io/blog/categories/hatalar/atom.xml" rel="self"/>
+  <link href="http://sayz.github.io/"/>
+  <updated>2013-04-08T18:22:18+03:00</updated>
+  <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[cinnamon settings'de python hatası]]></title>
-    <link href="http://sayz.github.com/blog/2013/04/03/cinnamon-settingsde-python-hatasi/"/>
+    <link href="http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi/"/>
     <updated>2013-04-03T16:16:00+03:00</updated>
-    <id>http://sayz.github.com/blog/2013/04/03/cinnamon-settingsde-python-hatasi</id>
+    <id>http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi</id>
     <content type="html"><![CDATA[<p>masaüstü sistem olarak linux mint cinnamon 14 kullanıyorum geçenlerde cinnamon'un ayarlarını açmaya çalıştığımda açılmadı konsola yazdığımda şöyle bir hata alıyorum:</p>
 
 <pre><code>sayz@caravasar$  cinnamon-settings 
