@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://sayz.github.com
+url: http://sayz.github.io
 title: Sayz'ın Usu
-subtitle: aklımdan geçenler.
+subtitle: aklımdan geçenler...
 author: Sefa Yıldız
 simple_search: http://google.com/search
 description:
@@ -85,7 +85,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: otopress-sayz
+disqus_short_name: 'octopress-sayz'
 disqus_show_comment_count: true
 
 # Google Analytics
