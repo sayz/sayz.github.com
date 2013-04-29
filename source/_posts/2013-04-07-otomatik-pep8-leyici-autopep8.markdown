@@ -3,7 +3,7 @@ layout: post
 title: "otomatik pep8'leyici: autopep8"
 date: 2013-04-07 21:45
 comments: true
-categories: python
+categories: [python, '19']
 ---
 
 herkese merhabalar;
