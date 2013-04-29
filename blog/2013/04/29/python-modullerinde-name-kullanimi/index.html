@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>cinnamon settings'de python hatası - Sayz'ın Usu</title>
+  <title>python modüllerinde __name__ Özelliğinin kullanımı - Sayz'ın Usu</title>
   <meta name="author" content="Sefa Yıldız">
 
   
-  <meta name="description" content="masaüstü sistem olarak linux mint cinnamon 14 kullanıyorum geçenlerde cinnamon&#8217;un ayarlarını açmaya çalıştığımda açılmadı konsola yazdığımda &hellip;">
+  <meta name="description" content="Modüller yenilir mi, içilir mi? Öncelikle python&#8217;da modüllerden ufak bi&#8217; bahsedeyim. Bildiğiniz gibi bir betik içersinde kodlarımızı &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi">
+  <link rel="canonical" href="http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sayz'ın Usu" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Cinnamon Settings'de Python Hatası</h1>
+      <h1 class="entry-title">Python Modüllerinde __name__ Özelliğinin Kullanımı</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@
   
 
 
-<time datetime="2013-04-03T16:16:00+03:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
+<time datetime="2013-04-29T22:45:00+03:00" pubdate data-updated="true">Apr 29<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,16 +105,65 @@
   </header>
 
 
-<div class="entry-content"><p>masaüstü sistem olarak linux mint cinnamon 14 kullanıyorum geçenlerde cinnamon&#8217;un ayarlarını açmaya çalıştığımda açılmadı konsola yazdığımda şöyle bir hata alıyorum:</p>
+<div class="entry-content"><h4>Modüller yenilir mi, içilir mi?</h4>
 
-<pre><code>sayz@caravasar$  cinnamon-settings 
-/usr/lib/python2.7/dist-packages/gobject/constants.py:24: Warning: g_boxed_type_register_static    : assertion `g_type_from_name (name) == 0' failed
-import gobject._gobject
+<p>Öncelikle python&#8217;da modüllerden ufak bi&#8217; bahsedeyim. Bildiğiniz gibi <strong>bir betik içersinde</strong> kodlarımızı tekrar tekrar yazmamak için bir kez fonksiyon tanımlamamız yeterli. O fonksiyonu kullanarak kodları tekrar kullanabiliyoruz. Peki ya aynı fonksiyona başka bir Python programında da ihtiyacımız olursa ne yapacağız? Cevap tabii ki modül kullanmak.</p>
 
-&gt;&gt;&gt;
-</code></pre>
+<p>Python&#8217;da modül yazmak için birçok metod var ama bunlardan en basit ve en yaygın olanı fonksiyonlar ve değişkenler için .py uzantılı dosyaları kullanmak. Yani <strong>evet</strong>, şimdiye kadar yazdığınız her python betiği aynı zamanda birer modül. Diğer bir modül oluşturma yöntemi de <a href="http://docs.python.org/3/extending/index.html">C veya C++ programlama dilleri ile yazmaktır</a>.</p>
 
-<p>hata cinnamon&#8217;dan değil python&#8217;dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>&#8216;de de hata kaydı açılmış bunula ilgili.</p>
+<p>Yani sonuç olarak python&#8217;da modül dediğimiz şey aslında bizim yazdığımız betiklerdir. Yani yazdığımız her python betiği bir modül olarak başka bir betikte içe aktarılabilir(<code>import</code>).  Modüller için ayrıca <a href="http://docs.python.org/3/tutorial/modules.html">buraya</a> bakabilirsiniz.</p>
+
+<h4>Bir modül&#8217;ün ismi</h4>
+
+<p>Yavaş yavaş asıl değinmek istediğim konuya geleyim. Python&#8217;da her modülün bir ismi vardır. Python yorumlayıcısı bir modülü yorumlarken o modüldeki tüm kodları çalıştırmadan önce  bazı değişkenler tanımlar. Bunlardan birisi <code>__name__</code> değişkenidir. Bu değişken, o modül&#8217;ün çalıştırılma şekline göre başka değerler alır.</p>
+
+<!-- more -->
+
+
+<p>Eğer python yorumlayıcısı bizim yazdığımız modülü ana program olarak çalıştırıyorsa <code>__name__</code> değişkeni <code>'__main__'</code> değerini alır. Ancak yazmış olduğumuz modül başka bir modül içinden çağırılıyorsa bu sefer <code>__name__</code> değişkeni kendi modül&#8217;ünün adını alır.</p>
+
+<p>Anlaşılması için bunları bir örnekle açıklayayım;</p>
+
+<p>Örneğin <code>ornek_modul.py</code> isminde bir dosyaya kaydedeceğimiz şöyle bir betik yazalım:</p>
+
+<figure class='code'><figcaption><span>__name__ özelliğinin kullanımı</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Kendi dosyam tarafından çalıştırıldım.&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">else</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Başka bir modül tarafından içe aktarılarak çalıştırıldım.&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Şimdi bu betikle ilgili çıktılara bakalım:</p>
+
+<figure class='code'><figcaption><span>çıktı testleri</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python3 ornek_modul.py
+</span><span class='line'>Kendi dosyam tarafından çalıştırıldım.
+</span><span class='line'><span class="nv">$ </span>python3
+</span><span class='line'>&gt;&gt;&gt; import ornek_modul
+</span><span class='line'>Başka bir modül tarafından içe aktarılarak çalıştırıldım.
+</span><span class='line'>&gt;&gt;&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Görüldüğü gibi <code>ornek_modul.py</code> doyasını kendi başına çalıştırısak <code>__name__</code> değişkeni <code>'__main__'</code> değerini alıyor. Fakat python&#8217;un etkileşimli kabuğuna girip <code>ornek_modul</code> modülünü içeri aktarırsak 1. koddaki <code>else</code> bloğuna düşeriz çünkü <code>__name__</code> değişkeni bu defa modülün ismi olan <code>ornek_modul</code> değerini almış olur.</p>
+
+<p>kaynaklar:</p>
+
+<ul>
+<li><a href="http://swaroopch.com/notes/python/">a byte of python</a></li>
+<li><a href="http://stackoverflow.com/questions/419163/what-does-if-name-main-do">stackoverflow</a></li>
+<li><a href="http://docs.python.org/">python docs</a></li>
+</ul>
+
 </div>
 
 
@@ -137,12 +186,12 @@ import gobject._gobject
   
 
 
-<time datetime="2013-04-03T16:16:00+03:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
+<time datetime="2013-04-29T22:45:00+03:00" pubdate data-updated="true">Apr 29<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/hatalar/'>hatalar</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/python/'>python</a>
+    <a class='category' href='/blog/categories/19/'>19</a>, <a class='category' href='/blog/categories/python/'>python</a>
   
 </span>
 
@@ -151,7 +200,7 @@ import gobject._gobject
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi/" data-via="sayzus" data-counturl="http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi/" data-via="sayzus" data-counturl="http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -164,10 +213,8 @@ import gobject._gobject
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/03/29/merhaba-octopress/" title="Previous Post: merhaba octopress">&laquo; merhaba octopress</a>
+        <a class="basic-alignment left" href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/" title="Previous Post: otomatik pep8'leyici: autopep8">&laquo; otomatik pep8'leyici: autopep8</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/" title="Next Post: otomatik pep8'leyici: autopep8">otomatik pep8'leyici: autopep8 &raquo;</a>
       
     </p>
   </footer>
@@ -258,8 +305,8 @@ import gobject._gobject
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi/';
-        var disqus_url = 'http://sayz.github.io/blog/2013/04/03/cinnamon-settingsde-python-hatasi/';
+        var disqus_identifier = 'http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi/';
+        var disqus_url = 'http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi/';
         var disqus_script = 'embed.js';
       
     (function () {

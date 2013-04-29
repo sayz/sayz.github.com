@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 19 | Sayz'ın Usu]]></title>
   <link href="http://sayz.github.io/blog/categories/19/atom.xml" rel="self"/>
   <link href="http://sayz.github.io/"/>
-  <updated>2013-04-10T17:08:05+03:00</updated>
+  <updated>2013-04-30T01:44:24+03:00</updated>
   <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[python modüllerinde __name__ Özelliğinin kullanımı]]></title>
+    <link href="http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi/"/>
+    <updated>2013-04-29T22:45:00+03:00</updated>
+    <id>http://sayz.github.io/blog/2013/04/29/python-modullerinde-name-kullanimi</id>
+    <content type="html"><![CDATA[<h4>Modüller yenilir mi, içilir mi?</h4>
+
+<p>Öncelikle python'da modüllerden ufak bi' bahsedeyim. Bildiğiniz gibi <strong>bir betik içersinde</strong> kodlarımızı tekrar tekrar yazmamak için bir kez fonksiyon tanımlamamız yeterli. O fonksiyonu kullanarak kodları tekrar kullanabiliyoruz. Peki ya aynı fonksiyona başka bir Python programında da ihtiyacımız olursa ne yapacağız? Cevap tabii ki modül kullanmak.</p>
+
+<p>Python'da modül yazmak için birçok metod var ama bunlardan en basit ve en yaygın olanı fonksiyonlar ve değişkenler için .py uzantılı dosyaları kullanmak. Yani <strong>evet</strong>, şimdiye kadar yazdığınız her python betiği aynı zamanda birer modül. Diğer bir modül oluşturma yöntemi de <a href="http://docs.python.org/3/extending/index.html">C veya C++ programlama dilleri ile yazmaktır</a>.</p>
+
+<p>Yani sonuç olarak python'da modül dediğimiz şey aslında bizim yazdığımız betiklerdir. Yani yazdığımız her python betiği bir modül olarak başka bir betikte içe aktarılabilir(<code>import</code>).  Modüller için ayrıca <a href="http://docs.python.org/3/tutorial/modules.html">buraya</a> bakabilirsiniz.</p>
+
+<h4>Bir modül'ün ismi</h4>
+
+<p>Yavaş yavaş asıl değinmek istediğim konuya geleyim. Python'da her modülün bir ismi vardır. Python yorumlayıcısı bir modülü yorumlarken o modüldeki tüm kodları çalıştırmadan önce  bazı değişkenler tanımlar. Bunlardan birisi <code>__name__</code> değişkenidir. Bu değişken, o modül'ün çalıştırılma şekline göre başka değerler alır.</p>
+
+<!-- more -->
+
+
+<p>Eğer python yorumlayıcısı bizim yazdığımız modülü ana program olarak çalıştırıyorsa <code>__name__</code> değişkeni <code>'__main__'</code> değerini alır. Ancak yazmış olduğumuz modül başka bir modül içinden çağırılıyorsa bu sefer <code>__name__</code> değişkeni kendi modül'ünün adını alır.</p>
+
+<p>Anlaşılması için bunları bir örnekle açıklayayım;</p>
+
+<p>Örneğin <code>ornek_modul.py</code> isminde bir dosyaya kaydedeceğimiz şöyle bir betik yazalım:</p>
+
+<p>``` python <strong>name</strong> özelliğinin kullanımı
+if <strong>name</strong> == '<strong>main</strong>':</p>
+
+<pre><code>print('Kendi dosyam tarafından çalıştırıldım.')
+</code></pre>
+
+<p>else:</p>
+
+<pre><code>print('Başka bir modül tarafından içe aktarılarak çalıştırıldım.')
+</code></pre>
+
+<p>```
+Şimdi bu betikle ilgili çıktılara bakalım:</p>
+
+<p>```bash çıktı testleri
+$ python3 ornek_modul.py
+Kendi dosyam tarafından çalıştırıldım.
+$ python3</p>
+
+<blockquote><blockquote><blockquote><p>import ornek_modul
+Başka bir modül tarafından içe aktarılarak çalıştırıldım.</p></blockquote></blockquote></blockquote>
+
+<p>```</p>
+
+<p>Görüldüğü gibi <code>ornek_modul.py</code> doyasını kendi başına çalıştırısak <code>__name__</code> değişkeni <code>'__main__'</code> değerini alıyor. Fakat python'un etkileşimli kabuğuna girip <code>ornek_modul</code> modülünü içeri aktarırsak 1. koddaki <code>else</code> bloğuna düşeriz çünkü <code>__name__</code> değişkeni bu defa modülün ismi olan <code>ornek_modul</code> değerini almış olur.</p>
+
+<p>kaynaklar:</p>
+
+<ul>
+<li><a href="http://swaroopch.com/notes/python/">a byte of python</a></li>
+<li><a href="http://stackoverflow.com/questions/419163/what-does-if-name-main-do">stackoverflow</a></li>
+<li><a href="http://docs.python.org/">python docs</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[otomatik pep8'leyici: autopep8]]></title>

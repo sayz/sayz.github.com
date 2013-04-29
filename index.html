@@ -9,7 +9,7 @@
   <meta name="author" content="Sefa Yıldız">
 
   
-  <meta name="description" content="herkese merhabalar; autopep8 için bölüm&#8217;ün e-posta listesine attığım e-postayı buraya da geçeyim.$ bildiğiniz gibi python için bir kod yazım &hellip;">
+  <meta name="description" content="Modüller yenilir mi, içilir mi? Öncelikle python&#8217;da modüllerden ufak bi&#8217; bahsedeyim. Bildiğiniz gibi bir betik içersinde kodlarımızı &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,59 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/29/python-modullerinde-name-kullanimi/">Python Modüllerinde __name__ Özelliğinin Kullanımı</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-29T22:45:00+03:00" pubdate data-updated="true">Apr 29<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/04/29/python-modullerinde-name-kullanimi/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4>Modüller yenilir mi, içilir mi?</h4>
+
+<p>Öncelikle python&#8217;da modüllerden ufak bi&#8217; bahsedeyim. Bildiğiniz gibi <strong>bir betik içersinde</strong> kodlarımızı tekrar tekrar yazmamak için bir kez fonksiyon tanımlamamız yeterli. O fonksiyonu kullanarak kodları tekrar kullanabiliyoruz. Peki ya aynı fonksiyona başka bir Python programında da ihtiyacımız olursa ne yapacağız? Cevap tabii ki modül kullanmak.</p>
+
+<p>Python&#8217;da modül yazmak için birçok metod var ama bunlardan en basit ve en yaygın olanı fonksiyonlar ve değişkenler için .py uzantılı dosyaları kullanmak. Yani <strong>evet</strong>, şimdiye kadar yazdığınız her python betiği aynı zamanda birer modül. Diğer bir modül oluşturma yöntemi de <a href="http://docs.python.org/3/extending/index.html">C veya C++ programlama dilleri ile yazmaktır</a>.</p>
+
+<p>Yani sonuç olarak python&#8217;da modül dediğimiz şey aslında bizim yazdığımız betiklerdir. Yani yazdığımız her python betiği bir modül olarak başka bir betikte içe aktarılabilir(<code>import</code>).  Modüller için ayrıca <a href="http://docs.python.org/3/tutorial/modules.html">buraya</a> bakabilirsiniz.</p>
+
+<h4>Bir modül&#8217;ün ismi</h4>
+
+<p>Yavaş yavaş asıl değinmek istediğim konuya geleyim. Python&#8217;da her modülün bir ismi vardır. Python yorumlayıcısı bir modülü yorumlarken o modüldeki tüm kodları çalıştırmadan önce  bazı değişkenler tanımlar. Bunlardan birisi <code>__name__</code> değişkenidir. Bu değişken, o modül&#8217;ün çalıştırılma şekline göre başka değerler alır.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/29/python-modullerinde-name-kullanimi/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -324,6 +377,10 @@ import gobject._gobject
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/29/python-modullerinde-name-kullanimi/">python modüllerinde __name__ Özelliğinin kullanımı</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/04/07/otomatik-pep8-leyici-autopep8/">otomatik pep8&#8217;leyici: autopep8</a>
