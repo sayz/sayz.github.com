@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Sayz'ın Usu]]></title>
   <link href="http://sayz.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://sayz.github.io/"/>
-  <updated>2013-05-04T01:48:03+03:00</updated>
+  <updated>2013-07-07T23:22:13+03:00</updated>
   <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
@@ -27,7 +27,7 @@ import gobject._gobject
 &gt;&gt;&gt;
 </code></pre>
 
-<p>hata cinnamon'dan değil python'dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>'de de hata kaydı açılmış bunula ilgili.</p>
+<p>hata cinnamon'dan değil python'dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>&lsquo;de de hata kaydı açılmış bunula ilgili.</p>
 ]]></content>
   </entry>
   

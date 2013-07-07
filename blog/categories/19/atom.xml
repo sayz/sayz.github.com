@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 19 | Sayz'ın Usu]]></title>
   <link href="http://sayz.github.io/blog/categories/19/atom.xml" rel="self"/>
   <link href="http://sayz.github.io/"/>
-  <updated>2013-05-04T01:48:03+03:00</updated>
+  <updated>2013-07-07T23:22:13+03:00</updated>
   <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
@@ -40,7 +40,7 @@
 <p>Örneğin <code>ornek_modul.py</code> isminde bir dosyaya kaydedeceğimiz şöyle bir betik yazalım:</p>
 
 <p>``` python <strong>name</strong> özelliğinin kullanımı
-if <strong>name</strong> == '<strong>main</strong>':</p>
+if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
 
 <pre><code>print('Kendi dosyam tarafından çalıştırıldım.')
 </code></pre>
@@ -87,7 +87,7 @@ Başka bir modül tarafından içe aktarılarak çalıştırıldım.</p></blockq
 
 <p>bildiğiniz gibi python için bir kod yazım stili var: pep8 (bilmeyenler için<sup>(<a href="http://www.python.org/dev/peps/pep-0008/">1</a>)</sup>), neyse, işte python ile yeni kod yazmaya başlayan arkadaşlar genellikle bu kurallara, stile uymakta zorlanır veya erinirler bunları uygulamaya, ne bileyim işleçler arasında boşluk bırakmak falan zor gelir kimisine.</p>
 
-<p>biliyorsunuz genelde tembel insanlarız bizler :-) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :-) ve kalkıp bir otomatik "pep8"leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
+<p>biliyorsunuz genelde tembel insanlarız bizler :&ndash;) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :&ndash;) ve kalkıp bir otomatik &ldquo;pep8"leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
 
 <h5>peki nedir bu autopep8, yenilir mi içilir mi?</h5>
 
@@ -119,7 +119,7 @@ Başka bir modül tarafından içe aktarılarak çalıştırıldım.</p></blockq
 
 <p>  \HTH</p>
 
-<p>  --
+<p>  &mdash;
   sayz</p>
 ]]></content>
   </entry>

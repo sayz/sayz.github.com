@@ -4,7 +4,7 @@
   <title><![CDATA[Sayz'ın Usu]]></title>
   <link href="http://sayz.github.io/atom.xml" rel="self"/>
   <link href="http://sayz.github.io/"/>
-  <updated>2013-05-04T01:48:03+03:00</updated>
+  <updated>2013-07-07T23:22:13+03:00</updated>
   <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
@@ -91,7 +91,7 @@
 
 <p>bildiğiniz gibi python için bir kod yazım stili var: pep8 (bilmeyenler için<sup>(<a href="http://www.python.org/dev/peps/pep-0008/">1</a>)</sup>), neyse, işte python ile yeni kod yazmaya başlayan arkadaşlar genellikle bu kurallara, stile uymakta zorlanır veya erinirler bunları uygulamaya, ne bileyim işleçler arasında boşluk bırakmak falan zor gelir kimisine.</p>
 
-<p>biliyorsunuz genelde tembel insanlarız bizler :-) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :-) ve kalkıp bir otomatik &#8220;pep8&#8221;leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
+<p>biliyorsunuz genelde tembel insanlarız bizler :&ndash;) o yüzden adamlar sırf bu bizim eringeçliğimizi bildikleri için erinmemişler :&ndash;) ve kalkıp bir otomatik &ldquo;pep8&#8221;leyici (tabir bana ait) yazmışlar, adı autopep8.</p>
 
 <h5>peki nedir bu autopep8, yenilir mi içilir mi?</h5>
 
@@ -123,7 +123,7 @@
 
 <p>  \HTH</p>
 
-<p>  &#8211;
+<p>  &mdash;
   sayz</p>
 ]]></content>
   </entry>
@@ -142,7 +142,7 @@ import gobject._gobject
 &gt;&gt;&gt;
 </code></pre>
 
-<p>hata cinnamon&#8217;dan değil python&#8217;dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>&#8216;de de hata kaydı açılmış bunula ilgili.</p>
+<p>hata cinnamon&#8217;dan değil python&#8217;dan kaynaklanıyor belli ki ama daha çözüme ulaşamadım ulaşınca buraya da geçeceğim. <a href="http://goo.gl/CtZUv">launchpad</a>&lsquo;de de hata kaydı açılmış bunula ilgili.</p>
 ]]></content>
   </entry>
   
@@ -161,7 +161,7 @@ import gobject._gobject
 
 <p>Kod blokları denemesi</p>
 
-<figure class='code'><figcaption><span>Javascript Array Syntax </span><a href='http://j.mp/pPUUmW'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Javascript Array Syntax</span><a href='http://j.mp/pPUUmW'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
@@ -170,7 +170,7 @@ import gobject._gobject
 
 <p>kod blokları denemesi 2</p>
 
-<figure class='code'><figcaption><span>liste analizi  </span></figcaption>
+<figure class='code'><figcaption><span>liste analizi </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: kod | Sayz'ın Usu]]></title>
   <link href="http://sayz.github.io/blog/categories/kod/atom.xml" rel="self"/>
   <link href="http://sayz.github.io/"/>
-  <updated>2013-05-04T01:48:03+03:00</updated>
+  <updated>2013-07-07T23:22:13+03:00</updated>
   <id>http://sayz.github.io/</id>
   <author>
     <name><![CDATA[Sefa Yıldız]]></name>
@@ -28,15 +28,16 @@
 
 <p>Kod blokları denemesi</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Javascript Array Syntax </span><a href='http://j.mp/pPUUmW'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Javascript Array Syntax <a href="http://j.mp/pPUUmW">http://j.mp/pPUUmW</a> MDN Documentation </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">hellip</span><span class="p">;,</span> <span class="nx">elementN</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>kod blokları denemesi 2</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>liste analizi  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>liste analizi </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -64,11 +65,11 @@
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
 <span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="sd">&#39;&#39;&#39;</span>
-</span><span class='line'><span class="sd">Created on 22 Nis 2011&lt;/p&gt;</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">Created</span> <span class="n">on</span> <span class="mi">22</span> <span class="n">Nis</span> <span class="mi">2011</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sd">&lt;p&gt;@author: sayz</span>
-</span><span class='line'><span class="sd">&#39;&#39;&#39;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@author</span><span class="p">:</span> <span class="n">sayz</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="s">&#39;&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">analiz</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -90,7 +91,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">ö</span><span class="n">rnek</span> <span class="n">kullan</span><span class="err">ı</span><span class="n">m</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">analiz</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;1.1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">analiz</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="mf">1.1</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
